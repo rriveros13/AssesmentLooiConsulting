@@ -59,7 +59,7 @@ namespace Assesment.Controllers
             try
             {
                 _customerRepository.AddCustomer(obj);
-                return Ok();
+                return Ok($"Customer has been added correctly");
 
             }
             catch 
@@ -67,8 +67,6 @@ namespace Assesment.Controllers
             {
                 throw e;
             }
-
-
         }
 
         [HttpPut]
@@ -78,7 +76,7 @@ namespace Assesment.Controllers
             try
             {
                 _customerRepository.UpdateCustomer(customerId, updatedCustomer);
-                return Ok();
+                return Ok($"Customer has been updated correctly");
 
             }
             catch
